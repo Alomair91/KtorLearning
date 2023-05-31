@@ -1,0 +1,21 @@
+2023-05-30 17:27:44.380 [main] TRACE Application - {
+    # application.conf @ file:/D:/Learn/Kotlin/KtorTestProject/KtorTestProject/build/resources/main/application.conf: 5
+    "application" : {
+        # application.conf @ file:/D:/Learn/Kotlin/KtorTestProject/KtorTestProject/build/resources/main/application.conf: 6
+        "modules" : [
+            # application.conf @ file:/D:/Learn/Kotlin/KtorTestProject/KtorTestProject/build/resources/main/application.conf: 7
+            "com.omairtech.ApplicationKt.module"
+        ]
+    },
+    # application.conf @ file:/D:/Learn/Kotlin/KtorTestProject/KtorTestProject/build/resources/main/application.conf: 2
+    "deployment" : {
+        # application.conf @ file:/D:/Learn/Kotlin/KtorTestProject/KtorTestProject/build/resources/main/application.conf: 3
+        "port" : 8080
+    },
+    # Content hidden
+    "security" : "***"
+}
+
+2023-05-30 17:27:44.450 [main] INFO  Application - Autoreload is disabled because the development mode is off.
+2023-05-30 17:27:44.836 [main] INFO  Application - Responding at http://0.0.0.0:8080
+2023-05-30 17:27:44.837 [main] INFO  Application - Application started in 0.401 seconds.
