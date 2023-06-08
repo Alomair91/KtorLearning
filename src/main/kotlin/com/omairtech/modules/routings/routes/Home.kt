@@ -1,11 +1,13 @@
 package com.omairtech.modules.routings.routes
 
 import io.ktor.application.*
+import io.ktor.html.*
 import io.ktor.http.*
 import io.ktor.http.content.*
 import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
+import kotlinx.html.*
 import kotlinx.serialization.Serializable
 import java.util.*
 
@@ -24,6 +26,24 @@ fun Application.configureHomeRouting() {
             resources(resourcePackage = "images") // import all the images in the folder name images
             resource(remotePath = "htmlWelcome", resource = "html/welcome.html")
             resource(remotePath = "txtWelcome", resource = "txt/welcome.txt")
+        }
+
+        // http://127.0.0.1:8080/welcome
+        get("/welcome2") {
+            val name = call.request.queryParameters["name"]
+            call.respondHtml{
+                head {
+                     title { +"Welcome Page" }
+                }
+                body {
+                    h3 {
+                        +"Welcomes, $name"
+                    }
+                    p { +"Current directory is : ${System.getProperty("user.dir")}" }
+
+                    img(src = "assets/img_3.jpg")
+                }
+            }
         }
 
         // http://127.0.0.1:8080
